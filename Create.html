@@ -283,6 +283,23 @@
 
 <script>
 
+      //DROPDOWN UPDATE
+      const dropdownButtonUpdate = document.getElementById('dropdownButtonUpdate');
+    const dropdownContentUpdate = document.getElementById('dropdownContentUpdate');
+  
+    dropdownButtonUpdate.addEventListener('click', () => {
+      dropdownContentUpdate.classList.toggle('hidden');
+    });
+  
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (!dropdownButtonUpdate.contains(event.target) && !dropdownContentUpdate.contains(event.target)) {
+        dropdownContentUpdate.classList.add('hidden');
+      }
+    });
+
+    
+
 </script>
 
 
