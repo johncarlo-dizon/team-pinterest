@@ -315,6 +315,22 @@
       }
     });
 
+        //DROPDOWN SETTING
+
+        const dropdownButtonSetting = document.getElementById('dropdownButtonSetting');
+    const dropdownContentSetting = document.getElementById('dropdownContentSetting');
+  
+    dropdownButtonSetting.addEventListener('click', () => {
+      dropdownContentSetting.classList.toggle('hidden');
+    });
+  
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (!dropdownButtonSetting.contains(event.target) && !dropdownContentSetting.contains(event.target)) {
+        dropdownContentSetting.classList.add('hidden');
+      }
+    });
+
 
 
 </script>
