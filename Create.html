@@ -333,6 +333,24 @@
 
 
 
+        //PROFILE SETTING
+
+        const dropdownButtonProf = document.getElementById('dropdownButtonProf');
+    const dropdownContentProf = document.getElementById('dropdownContentProf');
+  
+    dropdownButtonProf.addEventListener('click', () => {
+      dropdownContentProf.classList.toggle('hidden');
+    });
+  
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (!dropdownButtonProf.contains(event.target) && !dropdownContentProf.contains(event.target)) {
+        dropdownContentProf.classList.add('hidden');
+      }
+    });
+
+
+
 </script>
 
 
