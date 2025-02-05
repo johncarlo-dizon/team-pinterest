@@ -298,7 +298,24 @@
       }
     });
 
-    
+
+        //DROPDOWN MESSAGE
+
+        const dropdownButtonMsg = document.getElementById('dropdownButtonMsg');
+    const dropdownContentMsg = document.getElementById('dropdownContentMsg');
+  
+    dropdownButtonMsg.addEventListener('click', () => {
+      dropdownContentMsg.classList.toggle('hidden');
+    });
+  
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (!dropdownButtonMsg.contains(event.target) && !dropdownContentMsg.contains(event.target)) {
+        dropdownContentMsg.classList.add('hidden');
+      }
+    });
+
+
 
 </script>
 
